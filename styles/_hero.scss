@@ -5,7 +5,40 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    @include media-breakpoint-down(lg){
-        padding: $margin-lg;
+
+    background: radial-gradient(35.76% 44.26% at 5.1% 7.01%, rgba(0, 135, 254, 0.149164) 0%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(45% 104.25% at 85.62% 105.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(0deg, #1F1F1D, #1F1F1D), #1F1F1D;
+
+    &--left-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        h1 {
+            color: $text-color-wht;
+        }
+        p {
+            color: rgba(255, 255, 255, 0.72);
+            text-align: start;
+            font-size: 1rem;
+        }
+        &__contact {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            gap: 2rem;
+            padding-top: 2rem;
+            a {
+                text-decoration: none;
+                color: $text-color-wht;
+            }
+        }
+    }
+    &--right-col {
+        img {
+            width: 90%;
+            height: auto;
+        }
     }
 }

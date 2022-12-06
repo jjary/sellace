@@ -1,48 +1,6 @@
 <?php
-
 function custom_post_type()
 {
-    $labels = array(
-        'name'                => _x('Referencje', 'Post Type General Name', 'golizard-template'),
-        'singular_name'       => _x('Referencja', 'Post Type Singular Name', 'golizard-template'),
-        'menu_name'           => __('Referencje', 'golizard-template'),
-        'parent_item_colon'   => __('Wpis nadrzędny', 'golizard-template'),
-        'all_items'           => __('Wszystkie referencje', 'golizard-template'),
-        'view_item'           => __('Zobacz referencję', 'golizard-template'),
-        'add_new_item'        => __('Dodaj nową referencję', 'golizard-template'),
-        'add_new'             => __('Dodaj nową', 'golizard-template'),
-        'edit_item'           => __('Edytuj referencję', 'golizard-template'),
-        'update_item'         => __('Aktualizuj referencję', 'golizard-template'),
-        'search_items'        => __('Szukaj opinii', 'golizard-template'),
-        'not_found'           => __('Nie znaleziono', 'golizard-template'),
-        'not_found_in_trash'  => __('Nie znaleziono w koszu', 'golizard-template'),
-    );
-        
-    $args = array(
-        'label'               => __('Referencje', 'golizard-template'),
-        'description'         => __('Sekcja wystawionych referencji', 'golizard-template'),
-        'labels'              => $labels,
-        'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',),
-        'taxonomies'          => array('genres'),
-        'hierarchical'        => false,
-        'public'              => true,
-        'show_ui'             => true,
-        'show_in_menu'        => true,
-        'show_in_nav_menus'   => true,
-        'show_in_admin_bar'   => true,
-        'menu_icon'           => 'dashicons-testimonial',
-        'menu_position'       => 5,
-        'can_export'          => true,
-        'has_archive'         => true,
-        'exclude_from_search' => false,
-        'publicly_queryable'  => true,
-        'capability_type'     => 'post',
-        'show_in_rest' => true,
-
-    );
-
-    register_post_type('reference', $args);
-
     $labels = array(
         'name'                => _x('Usługi', 'Post Type General Name', 'golizard-template'),
         'singular_name'       => _x('Usługa', 'Post Type Singular Name', 'golizard-template'),
@@ -79,30 +37,28 @@ function custom_post_type()
         'publicly_queryable'  => true,
         'capability_type'     => 'post',
         'show_in_rest' => true,
-
     );
-
     register_post_type('services', $args);
-
+    
     $labels = array(
-        'name'                => _x('Współpraca', 'Post Type General Name', 'golizard-template'),
-        'singular_name'       => _x('Współpraca', 'Post Type Singular Name', 'golizard-template'),
-        'menu_name'           => __('Współpraca', 'golizard-template'),
+        'name'                => _x('Narzędzia', 'Post Type General Name', 'golizard-template'),
+        'singular_name'       => _x('Narzędzie', 'Post Type Singular Name', 'golizard-template'),
+        'menu_name'           => __('Narzędzia', 'golizard-template'),
         'parent_item_colon'   => __('Wpis nadrzędny', 'golizard-template'),
-        'all_items'           => __('Wszystkie firmy współpracujące', 'golizard-template'),
-        'view_item'           => __('Zobacz firmę', 'golizard-template'),
-        'add_new_item'        => __('Dodaj nową firmę współpracującą', 'golizard-template'),
-        'add_new'             => __('Dodaj nową', 'golizard-template'),
-        'edit_item'           => __('Edytuj firmę współpracującą', 'golizard-template'),
-        'update_item'         => __('Aktualizuj firmę współpracującą', 'golizard-template'),
-        'search_items'        => __('Szukaj firmy współpracującej', 'golizard-template'),
+        'all_items'           => __('Wszystkie narzędzia', 'golizard-template'),
+        'view_item'           => __('Zobacz narzędzie', 'golizard-template'),
+        'add_new_item'        => __('Dodaj nowe narzędzie', 'golizard-template'),
+        'add_new'             => __('Dodaj nowe narzędzie', 'golizard-template'),
+        'edit_item'           => __('Edytuj narzędzie', 'golizard-template'),
+        'update_item'         => __('Aktualizuj narzędzie', 'golizard-template'),
+        'search_items'        => __('Szukaj narzędzia', 'golizard-template'),
         'not_found'           => __('Nie znaleziono', 'golizard-template'),
         'not_found_in_trash'  => __('Nie znaleziono w koszu', 'golizard-template'),
     );
         
     $args = array(
-        'label'               => __('Współpraca', 'golizard-template'),
-        'description'         => __('Sekcja firm współpracujących', 'golizard-template'),
+        'label'               => __('Narzędzia', 'golizard-template'),
+        'description'         => __('Sekcja narzędzi mobilnych', 'golizard-template'),
         'labels'              => $labels,
         'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',),
         'taxonomies'          => array('genres'),
@@ -112,18 +68,54 @@ function custom_post_type()
         'show_in_menu'        => true,
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
-        'menu_icon'           => 'dashicons-businessman',
-        'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-admin-tools',
+        'menu_position'       => 6,
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'capability_type'     => 'post',
         'show_in_rest' => true,
-
     );
+    register_post_type('tools', $args);
 
-    register_post_type('collaboration', $args);
+    $labels = array(
+        'name'                => _x('Dane', 'Post Type General Name', 'golizard-template'),
+        'singular_name'       => _x('Dane', 'Post Type Singular Name', 'golizard-template'),
+        'menu_name'           => __('Dane', 'golizard-template'),
+        'parent_item_colon'   => __('Wpis nadrzędny', 'golizard-template'),
+        'all_items'           => __('Wszystkie dane', 'golizard-template'),
+        'view_item'           => __('Zobacz daną', 'golizard-template'),
+        'add_new_item'        => __('Dodaj nową daną', 'golizard-template'),
+        'add_new'             => __('Dodaj nową daną', 'golizard-template'),
+        'edit_item'           => __('Edytuj daną', 'golizard-template'),
+        'update_item'         => __('Aktualizuj daną', 'golizard-template'),
+        'search_items'        => __('Szukaj danej', 'golizard-template'),
+        'not_found'           => __('Nie znaleziono', 'golizard-template'),
+        'not_found_in_trash'  => __('Nie znaleziono w koszu', 'golizard-template'),
+    );
+        
+    $args = array(
+        'label'               => __('Dane', 'golizard-template'),
+        'description'         => __('Sekcja danych statystycznych', 'golizard-template'),
+        'labels'              => $labels,
+        'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',),
+        'taxonomies'          => array('genres'),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_icon'           => 'dashicons-editor-ol',
+        'menu_position'       => 7,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'show_in_rest' => true,
+    );
+    register_post_type('report', $args);
 }
-
 add_action('init', 'custom_post_type', 0);

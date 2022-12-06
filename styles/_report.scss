@@ -1,0 +1,31 @@
+// Start report section styling
+.report {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+    padding: $margin-xxl;
+    background: radial-gradient(35.76% 44.26% at 5.1% 7.01%, rgba(0, 135, 254, 0.149164) 0%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(45% 104.25% at 85.62% 105.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(0deg, #1F1F1D, #1F1F1D), #1F1F1D;
+
+    &--wrapper {
+        display: flex;
+        flex-direction: row;
+        ul {
+            color: $primary-color;
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            color: $text-color-wht;
+        }
+    }
+    .report-line {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        height: 1px;
+    }
+    .report-btn {
+        display: flex;
+        justify-content: end;
+    }
+}
+// End report section styling

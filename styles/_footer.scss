@@ -1,10 +1,10 @@
 .footer {
-    background-color: $main-color;
-    min-height: 25vh;
+    background: radial-gradient(45% 104.25% at 85.62% 105.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #1F1F1D;
+    min-height: 50vh;
     display: flex;
     text-align: center;
     align-items: center;
-    color: $text-color-contr;
+    color: $text-color-wht;
     padding: $margin-xxl;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -12,14 +12,14 @@
         padding: $margin-lg;
     }
     &--wrapper {
-        align-items: start;
         padding-top: 2%;
     }
     // Site logo in footer styling start
     &--logo {
         display: flex;
-        align-items: center;
-        text-align: center;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
             img {
                 max-width: 100%;
                 height: auto;
@@ -32,98 +32,52 @@
                     height: auto;
                 }
             }
+        p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.72);
+        }
     }
     // Site logo in footer styling end
-    &--item {
-        text-align: center;
-        @include media-breakpoint-down(lg){
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 1rem 0;
-        }
-        &__links {
-            display: flex;
-            flex-direction: column;
-            font-size: 1.4rem;
-            a {
-                text-decoration: none;
-                color: $text-color-contr;
-                &:hover {
-                    color: $secondary-color;
-                }
-            }
-        }
-        h4 {
-            font-size: 1.6rem !important;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 0.1rem;
-            @include media-breakpoint-down(lg){
-                font-size: 1.2rem !important;
-            }
-        }
-        p {
-            font-size: 1.6rem !important;
-            font-weight: 300;
-            @include media-breakpoint-down(lg){
-                font-size: 1.2rem !important;
-            }
-        }
-    }
-    &--socials {
+    &--nav {
         display: flex;
-        align-items: center;
-        justify-content: end;
-        font-size: 1.5rem;
-        @include media-breakpoint-down(lg){
-            justify-content: center;
-        }
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 1rem;
         a {
+            font-size: 1rem;
             text-decoration: none;
-            min-width: 3rem;
-            min-height: 3rem;
-            border: 1px solid $text-color-contr;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            i {
-                color: $text-color-contr;
-            }            
-        }
-        a:hover {            
-            border: 1px solid $secondary-color;
-            border-radius: 50%;
-            i {
-                color: $secondary-color;
-            }
-        }
-        a:first-child {
-            margin-right: 1rem;
+            color: $text-color-wht;
         }
     }
     &--divider {
         width: 100%;
-        border: 1px solid $text-color-contr;
-        background-color: $text-color-contr;
+        border: 1px solid $text-color-wht;
+        background-color: $color-black;
     }
-    &--copy {
+    &--copy {        
         p {
-            font-size: 1.6rem !important;
-            @include media-breakpoint-down(lg){
-                font-size: 1.2rem !important;
-            }
+            font-size: 0.8rem;
         }
-        
         &__left {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            align-items: center;
             text-align: start;
+            color: rgba(255, 255, 255, 0.72);
+            white-space: nowrap;
+            a {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.72);
+            }
         }
         &__right {
             text-align: end;
+            color: rgba(255, 255, 255, 0.72);
             a {
                 text-decoration: none;
-                color: $text-color-contr;
+                color: $text-color-wht;
                 &:hover {
                     color: $secondary-color;
                     cursor: pointer;

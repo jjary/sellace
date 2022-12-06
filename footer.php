@@ -3,47 +3,30 @@
     <div class="container-fluid">
         <div class="row footer--wrapper">
             <!-- Site logo start-->
-            <div class="col-md-6 col-lg-2 footer--logo">
+            <div class="col-md-6 col-lg-6 footer--logo">
                 <a href="#">
                     <?php
                         dynamic_sidebar('footer-logo')
                     ;?>
                 </a>
+                <p>From year to year we strive to invent the most innovative technology that is used by both small enterprises and space enterprises.</p>
             </div>
             <!-- Site logo end-->
 
-            <div class="col-md-6 col-lg-3 footer--item">
-                <h4>Kontakt</h4>
-                <p>123 123 123</p>
-                <p>mail@mail.pl</p>
-            </div>
-            <div class="col-md-6 col-lg-3 footer--item">
-                <h4>Kontakt</h4>
-                <p>123 123 123</p>
-                <p>mail@mail.pl</p>
-            </div>
-            <div class="col-md-6 col-lg-3 footer--item">
-                <h4>Nawigacja</h4>
-                <div class="footer--item__links">
-                    <a href="#">Strona główna</a>
-                    <a href="#">O mnie</a>
-                    <a href="#">Realizacje</a>
-                    <a href="#">Kontakt</a>
-                    <a href="#">Polityka prywatności</a>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-1 footer--socials">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <div class="col-md-6 col-lg-6 footer--nav">
+                <a href="#">Blog</a>
+                <a href="#">Kontakt</a>
+                <a href="#">Pobierz z NDA</a>
             </div>
         </div>
         <hr class="footer--divider">
         <div class="row footer--copy">
-            <div class="col-6 footer--copy__left">
-                <p>Copyright: Golizard <?php echo date("Y");?></p>
+            <div class="col-4 footer--copy__left">
+                <p>© Mobilizacja Biznesu <?php echo date("Y");?></p>
+                <a href="#">Polityka prywatności</a>
             </div>
-            <div class="col-6 footer--copy__right">
-                <p>Wdrożenie: <a href="https://www.golizard.pl/">golizard.pl</a></p>
+            <div class="col-8 footer--copy__right">
+                <p>Projekt strony internetowej stworzony przez Agencję Interaktywną Wzór</p>
             </div>
         </div>
     </div>

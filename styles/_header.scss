@@ -43,7 +43,7 @@
             cursor: pointer;
 
             i {
-                color: $text-color;
+                color: $text-color-wht;
                 font-size: 3rem;
                 position: absolute;
                 top: 0;
@@ -88,16 +88,12 @@
                     text-align: center;
                 }
                 a {
-                    font-size: 1.8rem;
-                    font-weight: 600;
-                    letter-spacing: 1px;
+                    font-size: 0.875rem;
+                    font-weight: 700;
                     text-decoration: none;
-                    text-transform: uppercase;
-                    color: $text-color;
-                    padding: 0 1rem;
+                    color: $text-color-wht;
                     &:hover {
                         color: $secondary;
-                        padding-bottom: 0.5rem;
                     }
                 }
             }
@@ -119,13 +115,13 @@
                 text-decoration: none;
                 min-width: 3rem;
                 min-height: 3rem;
-                border: 1px solid $text-color;
+                border: 1px solid $text-color-wht;
                 border-radius: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 i {
-                    color: $text-color;
+                    color: $text-color-wht;
                 }            
             }
             a:hover {            
@@ -156,8 +152,8 @@
     left: 0;
     right: 0;
     z-index: 99;
-    background: $main-color;
-    color: $text-color;
+    background: $primary-color;
+    color: $text-color-wht;
     list-style: none;
     padding: 10%;
     & li {
@@ -165,9 +161,8 @@
         text-align: center;
         & a {
             text-decoration: none;
-            font-size: $size-primary;
             letter-spacing: 1px;
-            color: $text-color;
+            color: $text-color-wht;
             &:hover {
                 color: $secondary-color;
             }

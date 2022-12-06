@@ -1,27 +1,98 @@
-.main-button {
+@import 'mixins';
+// Primary button style
+.primary-button {
+    font-family: 'Mulish', sans-serif;    
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    color: $text-color-contr;
-    background-color: $main-color;
-    padding: 2rem 4rem;
-    border-radius: 5px;
-}
-.main-button:hover{
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $text-color-wht;
     background-color: $primary-color;
-    color: $text-color-contr;
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    display: inline-block;
+    white-space: nowrap;
 }
-.outline-button {
-    color: $text-color;
-    padding: 1rem 6rem;
+.primary-button:hover{
+    background-color: $prim-hover-color;
+    color: $text-color-wht;
+    padding: 0.75rem 1.5rem;
+}
+@include md {
+    .primary-button {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding: 0.625rem 1.25rem;
+    }
+    .primary-button:hover{
+        background-color: $prim-hover-color;
+        padding: 0.625rem 1.25rem;
+    }
+}
+@include sm {
+    .primary-button {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+    .primary-button:hover{
+        background-color: $prim-hover-color;
+        padding: 0.5rem 0.75rem;
+    }
+}
+// Primary button style
+
+// Disabled primary button style
+.primary-button:disabled,
+.primary-button[disabled] {
+    color: $text-color-dsb;
+    background-color: $disabled-color;
+}
+// Disabled button style
+
+// Secondary button style
+.secondary-button {
+    font-family: 'Mulish', sans-serif;
     text-decoration: none;
-    font-size: 2rem;
-    border: 1px solid $text-color;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $text-color-wht;
+    background-color: #ffffff00;
+    border: 1px solid #fff;
+    padding: 0.75rem 1.5rem;
+    white-space: nowrap;
 }
-.outline-button:hover{
-    background-color: $main-color;
-    color: $secondary-color;
-    border: 1px solid $main-color;
+.secondary-button:hover{
+    background-color: $sec-hover-color;
 }
+@include md {
+    .secondary-button {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding: 0.625rem 1.25rem;
+    }
+    .secondary-button:hover{
+        background-color: $sec-hover-color;
+    }
+}
+@include sm {
+    .secondary-button {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+    .secondary-button:hover{
+        background-color: $sec-hover-color;
+    }
+}
+// Secondary button style
+
+// Secondary button disabled style
+.secondary-button:disabled, 
+.secondary-button[disabled] {
+    color: $sec-hover-color;    
+    background-color: $sec-hover-color;
+    border: 0;
+}
+// Secondary button disabled style
