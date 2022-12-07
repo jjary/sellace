@@ -4,16 +4,42 @@
     padding: $margin-xxl;
     display: flex;
     align-items: center;
+    @include media-breakpoint-down(md) {
+        padding: $margin-lg;
+    }
+    @include media-breakpoint-down(sm) {
+        padding: $margin-sm;
+    }
+    .posts-desktop {
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+    .posts-large {
+        display: none;
+        @include media-breakpoint-down(md) {
+            display: block;
+        }
+    }
     &--header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         padding-bottom: 5%;
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
     &--content {
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        @include media-breakpoint-down(sm) {
+            padding: 5% 0;
+        }
+        
     }
     &--date {
         display: flex;

@@ -13,7 +13,7 @@
                         ));
                         while ($loop->have_posts()) : $loop->the_post();
                     ?>                            
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                             <ul>
                                 <li>
                                     <div class="report--wrapper__content">
@@ -36,7 +36,11 @@
         </div>
         <div class="row">
             <div class="col-12 report-btn">
-                <button class="primary-button">Zobacz zewnętrzny raport</button>
+                <?php
+                    $buttonReport = get_field('report-btn') 
+                ; ?>
+                <a href="<?php echo $buttonReport['url']; ?>" target="<?php echo $buttonReport['target']; ?>" type="button" class="primary-button"><?php echo $buttonReport['title']; ?>
+                </a> 
             </div>
         </div>
     </div>

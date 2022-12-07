@@ -5,9 +5,12 @@
     left: 0;
     z-index: 10;
     width: 100%;
-    padding: 0.5rem 10%;
-    @include media-breakpoint-down(lg) {
-        padding: 1rem 5%;
+    padding: 0.5rem 15%;
+    @include media-breakpoint-down(md) {
+        padding: $margin-lg;
+    }
+    @include media-breakpoint-down(sm) {
+        padding: 1%;
     }
     // Header style end   
 
@@ -17,6 +20,10 @@
             img {
                 max-height: 8rem;
                 width: auto;
+                @include media-breakpoint-down(sm) {
+                    max-height: 3rem;
+                    width: auto;
+                }
             }
         }
     }
@@ -28,7 +35,7 @@
         justify-content: flex-end;
         align-items: center;
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(sm) {
             justify-content: center;
             padding-top: 4rem;
             padding-bottom: 2rem;
@@ -36,7 +43,7 @@
         // Start hamburger icon styling
         &__toggle {
             text-align: right;
-            position: fixed;
+            position: absolute;
             z-index: 100;
             top: 1rem;
             right: 2rem;
@@ -44,22 +51,18 @@
 
             i {
                 color: $text-color-wht;
-                font-size: 3rem;
+                font-size: 1.5rem;
                 position: absolute;
                 top: 0;
                 right: 0;
-                padding: 1.5rem 10%;
-                @include media-breakpoint-down(lg){
-                    padding: 1.5rem 5%;
-                }
             }
             i:hover {
-                color: $secondary-color;
+                color: $sec-hover-color;
             }
             i:active {
                 color: $secondary-color;
             }
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(sm) {
                 display: none;
             }
             .closeIcon {
@@ -72,7 +75,7 @@
         &__nav {
             display: none;
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(sm) {
                 display: block;
             }
             ul {
@@ -83,7 +86,7 @@
                 list-style-type: none;
                 white-space: nowrap;
 
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(sm) {
                     flex-direction: column;
                     text-align: center;
                 }
@@ -99,45 +102,17 @@
             }
         }
         // End navbar styling
-
-        // Start social media icon styling
-        &__socials {
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            font-size: 1.5rem;
-
-            @include media-breakpoint-down(lg) {
+        &__button {
+            @include media-breakpoint-down(sm) {
                 display: none;
             }
-
-            a {
-                text-decoration: none;
-                min-width: 3rem;
-                min-height: 3rem;
-                border: 1px solid $text-color-wht;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                i {
-                    color: $text-color-wht;
-                }            
-            }
-            a:hover {            
-                border: 1px solid $secondary-color;
-                border-radius: 50%;
-                i {
-                    color: $secondary-color;
-                }
-            }
-            a:first-child {
-                margin-right: 1rem;
-            }
         }
-        // End social media icon styling
     }
     // End site main menu desktop styling
+}
+.primary-menu {
+    padding-left: 0;
+    padding-right: 2rem;
 }
 
 .menu-open header nav {

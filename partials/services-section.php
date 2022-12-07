@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h2>W czym <span class="clr-change">mogę pomóc</span><?php the_field('service-header');?></h2>
+                <?php the_field('service-header');?>
                 <!-- Get post from services -->
                 <div class="row">
                     <?php
@@ -14,7 +14,7 @@
                         ));
                         while ($loop->have_posts()) : $loop->the_post();
                     ?>
-                        <div class="col-xl-3 col-md-6 services--content">
+                        <div class="col-md-3 services--content">
                             <!-- Get post Icon -->
                                 <?php 
                                     $servicesIcon = get_field('service-icon');

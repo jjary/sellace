@@ -1,1 +1,1 @@
-"This is a Golizard template" 
+"This is a Golizard template for Sellace" 

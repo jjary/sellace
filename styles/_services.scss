@@ -5,6 +5,12 @@
     padding: $margin-xxl;
     text-align: center;
     min-height: 100vh;
+    @include media-breakpoint-down(md) {
+        padding: $margin-lg;
+    }
+    @include media-breakpoint-down(sm) {
+        padding: $margin-sm;
+    }
     h2 {
         padding-bottom: 5%;
     }
@@ -15,6 +21,9 @@
         text-align: center;
         gap: 1rem;
         padding-bottom: 2rem;
+        @include media-breakpoint-down(sm) {
+            gap: 0.5rem;
+        }
         img {
             width: 3rem;
             height: auto;

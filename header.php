@@ -42,7 +42,7 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Site logo start-->
-            <div class="col-2 header--logo">
+            <div class="col-md-2 col-sm-6 header--logo">
                 <a href="<?php echo get_home_url();?>">
                     <?php 
                         $logo_id = get_theme_mod( 'custom_logo' );
@@ -53,19 +53,21 @@
             <!-- Site logo end-->
             
             <!-- Site navigation start-->
-            <div class="col-8 header--wrapper">
+            <div class="col-md-8 col-sm-6 header--wrapper">
                 <!-- Start Menu dropdown -->
-                    <?= wp_nav_menu([
-                        'menu' => 'main-menu',
-                        'container' => 'nav',
-                        'container_class' => 'menu',
-                        'container_aria_label' => 'main menu of page',
-                        'theme_location' => 'main-menu',
-                        'menu_class'     => 'primary-menu',
-                        'menu_id'     => 'nav-menu',
-                        'add_a_class'     => 'menuItem',
-                        'fallback_cb' => false
-                    ]) ?>
+                    <div class="navigation">
+                        <?= wp_nav_menu([
+                            'menu' => 'main-menu',
+                            'container' => 'nav',
+                            'container_class' => 'menu',
+                            'container_aria_label' => 'main menu of page',
+                            'theme_location' => 'main-menu',
+                            'menu_class'     => 'primary-menu',
+                            'menu_id'     => 'nav-menu',
+                            'add_a_class'     => 'menuItem',
+                            'fallback_cb' => false
+                        ]) ?>
+                    </div>
 
                     <div class="header--wrapper__toggle">
                         <i class="fas fa-bars menuIcon"></i>

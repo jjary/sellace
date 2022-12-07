@@ -6,7 +6,14 @@
     text-align: center;
     align-items: center;
 
-    background: radial-gradient(35.76% 44.26% at 5.1% 7.01%, rgba(0, 135, 254, 0.149164) 0%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(45% 104.25% at 85.62% 105.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(0deg, #1F1F1D, #1F1F1D), #1F1F1D;
+    background: radial-gradient(35.76% 44.26% at 5.1% 7.01%, rgba(0, 135, 254, 0.149164) 0%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%), radial-gradient(45% 104.25% at 85.62% 105.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%), linear-gradient(0deg, #1F1F1D, #1F1F1D), #1F1F1D;
+
+    @include media-breakpoint-down(md) {
+        padding: $margin-lg;
+    }
+    @include media-breakpoint-down(sm) {
+        padding: $margin-sm;
+    }
 
     &--left-col {
         display: flex;
@@ -15,7 +22,11 @@
         align-items: flex-start;
         gap: 2rem;
         h1 {
+            text-align: start;
             color: $text-color-wht;
+            @include media-breakpoint-down(sm) {
+                padding-top: 10%;
+            }
         }
         p {
             color: rgba(255, 255, 255, 0.72);
@@ -39,6 +50,9 @@
         img {
             width: 90%;
             height: auto;
+            @include media-breakpoint-down(sm) {
+                padding-top: 5%;
+            }
         }
     }
 }

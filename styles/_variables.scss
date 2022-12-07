@@ -6,7 +6,6 @@ $prim-hover-color: #0E75EA;
 $sec-hover-color: #FFFFFF66;
 $disabled-color: #BBBBB8;
 $secondary-color: #000;
-$tertiary-color: #1b1b1b;
 $text-color-blc: #000;
 $text-color-wht: #fff;
 $text-color-dsb: #5F5F5C;
@@ -15,11 +14,14 @@ $bcg-color: #2da9e233;
 $color-black: #000;
 $color-white: #fff;
 
-$scrollbar-color: #c4c4c4;
-$scrollbar-color-hover: #aaaaaa;
-
 // Width of site margin
-$margin-strong: 0 20%;
-$margin-big: 0 15%;
-$margin-xxl: 0% 10%;
-$margin-lg: 0% 5%;
+$margin-xxl: 0% 15%;
+$margin-lg: 0% 2%;
+$margin-sm: 10% 1%;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 1167px,
+  xl: 1344px,
+) !default;

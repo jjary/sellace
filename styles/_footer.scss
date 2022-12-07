@@ -1,15 +1,16 @@
 .footer {
-    background: radial-gradient(45% 104.25% at 85.62% 105.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #1F1F1D;
+    background: radial-gradient(45% 104.25% at 85.62% 105.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%), #1F1F1D;
     min-height: 50vh;
     display: flex;
     text-align: center;
     align-items: center;
     color: $text-color-wht;
     padding: $margin-xxl;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(md){
         padding: $margin-lg;
+    }
+    @include media-breakpoint-down(sm) {
+        padding: $margin-sm;
     }
     &--wrapper {
         padding-top: 2%;
@@ -20,20 +21,36 @@
         flex-direction: column;
         align-items: flex-start;
         text-align: start;
+        .brand-xl {
+            img {
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+                @include media-breakpoint-down(sm) {
+                    display: block;
+                }
+            }
+        }
+        .brand-md {
+            img {
+                @include media-breakpoint-up(md) {
+                    display: none;
+                }
+                @include media-breakpoint-down(md) {
+                    display: block;
+                }
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+            }
+        }
             img {
                 max-width: 100%;
                 height: auto;
-                @include media-breakpoint-down(lg){
-                    max-width: 70%;
-                    height: auto;
-                }
-                @include media-breakpoint-down(lg){
-                    max-width: 30%;
-                    height: auto;
-                }
             }
         p {
-            font-size: 0.8rem;
+            font-size: 0.875rem;
+            font-weight: 400;
             color: rgba(255, 255, 255, 0.72);
         }
     }
@@ -41,19 +58,33 @@
     &--nav {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
         align-items: flex-end;
-        gap: 1rem;
-        a {
-            font-size: 1rem;
-            text-decoration: none;
-            color: $text-color-wht;
+        justify-content: end;
+        @include media-breakpoint-down(sm) {
+            justify-content: start;
+        }
+        .footer-menu {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+                padding-top: 5%;
+                a {
+                    text-decoration: none;
+                    color: $text-color-wht;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
         }
     }
     &--divider {
         width: 100%;
         border: 1px solid $text-color-wht;
-        background-color: $color-black;
+        background-color: $color-white;
     }
     &--copy {        
         p {
@@ -67,6 +98,10 @@
             text-align: start;
             color: rgba(255, 255, 255, 0.72);
             white-space: nowrap;
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
             a {
                 text-decoration: none;
                 color: rgba(255, 255, 255, 0.72);
@@ -75,6 +110,10 @@
         &__right {
             text-align: end;
             color: rgba(255, 255, 255, 0.72);
+            @include media-breakpoint-down(sm) {
+                text-align: start;
+                padding: 5% 0;
+            }
             a {
                 text-decoration: none;
                 color: $text-color-wht;
@@ -85,29 +124,4 @@
             }
         }
     }
-}
-
-.scroll-to-top {
-position: relative;
-}
-
-.scrl-btn-position {
-position: fixed;
-bottom: 1rem;
-right: 1rem;
-z-index: 99;
-}
-
-.scrl-btn-style {
-border: 0;
-border-radius: 50%;
-height: 4rem;
-width: 4rem;
-color: $primary-color;
-cursor: pointer;
-font-size: 3rem;
-display: flex;
-justify-content: center;
-align-items: center;
-visibility: hidden;
 }

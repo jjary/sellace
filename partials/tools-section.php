@@ -2,7 +2,7 @@
 <section class="tools">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-6 tools--right">
+            <div class="col-md-6 col-sm-12 tools--right">
                 <?php 
                     $toolsImg = get_field('tools-img');
                     if( ( $toolsImg ) ):?>
@@ -10,7 +10,7 @@
                 <?php endif; ?>
             </div>
             <!-- Get tools from cpt tools -->
-            <div class="col-6 tools--left">
+            <div class="col-md-6 col-sm-12 tools--left">
                 <h2><?php the_field('tools-header');?></h2>
                     <?php
                         $loop = new WP_Query(array(
@@ -29,6 +29,13 @@
                 </div>
             </div>
             <!-- Get tools from cpt tools -->
+            <div class="col-md-6 col-sm-12 tools--bottom">
+                <?php 
+                    $toolsImg = get_field('tools-img');
+                    if( ( $toolsImg ) ):?>
+                        <img src="<?php echo esc_url($toolsImg['url']); ?>" alt="<?php echo esc_attr($toolsImg['alt']);?>" />
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 </section>

@@ -4,8 +4,6 @@ $args = array('posts_per_page');
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
-//Kod miniaturki posta
-
 <?php endforeach;
 wp_reset_postdata();?>
 
